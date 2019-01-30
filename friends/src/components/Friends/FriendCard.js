@@ -1,8 +1,9 @@
 import React from 'react';
+import Friend from './Friend';
 
 const FriendCard = props => {
     return (
-        <div>FriendCard</div>
+        <div>FriendCard <Friend /></div>
     );
 };
 

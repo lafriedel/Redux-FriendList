@@ -1,8 +1,12 @@
 import React from 'react';
+import FriendsList from '../components/Friends/FriendsList';
 
 const FriendsListContainer = props => {
     return (
-        <div>FriendsListContainer</div>
+        <div>
+            FriendsListContainer
+            <FriendsList />
+        </div>
     );
 };
 

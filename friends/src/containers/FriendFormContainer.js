@@ -1,8 +1,12 @@
 import React from 'react';
+import FriendForm from '../components/Friends/FriendForm';
 
 const FriendFormContainer = props => {
     return (
-        <div>FriendFormContainer</div>
+        <div>
+            FriendFormContainer
+            <FriendForm />
+        </div>
     );
 };
 
