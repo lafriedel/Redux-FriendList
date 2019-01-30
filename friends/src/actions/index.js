@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const baseUrl = "http://localhost:5000";
+export const baseUrl = "http://localhost:5000/api/friends";
 
 export const POST_FRIEND_INIT = "POST_FRIEND_INIT";
 export const POST_FRIEND_SUCCESS = "POST_FRIEND_SUCCESS";
