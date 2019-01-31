@@ -3,7 +3,11 @@ import FriendCard from './FriendCard';
 
 const FriendsList = props => {
     return (
-        <div>FriendsList <FriendCard /></div>
+        <div>
+            {props.friends.map(friend => {
+                return <FriendCard friend={friend} />
+            })}
+        </div>
     );
 };
 

@@ -1,13 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import FriendsList from '../components/Friends/FriendsList';
 
 const FriendsListContainer = props => {
     return (
-        <div>
-            FriendsListContainer
-            <FriendsList />
-        </div>
+            <FriendsList friends={props.friends} />
     );
 };
 
-export default FriendsListContainer;
+const mapStateToProps = state => ({
+    friends: state.friends
+});
+
+export default connect(mapStateToProps)(FriendsListContainer);

@@ -23,6 +23,19 @@ const reducer = (state = initialState, action) => {
         ...state,
         isFetching: true
       };
+      case GET_FRIENDS_SUCCESS:
+      return {
+        ...state,
+        isFetching: false,
+        wasFetched: true,
+        friends: action.payload
+      };
+      case GET_FRIENDS_FAIL:
+      return {
+        ...state,
+        isFetching: false,
+        error: action.payload
+      }
     default:
       return state;
   }
