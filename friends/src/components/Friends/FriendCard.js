@@ -3,7 +3,7 @@ import Friend from './Friend';
 
 const FriendCard = props => {
     return (
-        <div><Friend friend={props.friend} /></div>
+        <div><Friend deleteFriend={props.deleteFriend} friend={props.friend} /></div>
     );
 };
 

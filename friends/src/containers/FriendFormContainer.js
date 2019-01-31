@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { postNewFriend } from "../actions";
+import { postNewFriend, updateFriend } from "../actions";
 
 import FriendForm from "../components/Friends/FriendForm";
 
@@ -28,19 +28,31 @@ class FriendFormContainer extends React.Component {
       this.props.postNewFriend(this.state.friend);
   };
 
+  updateFriend = e => {
+    e.preventDefault();
+    this.props.updateFriend(this.state.friend);
+  }
+
   render() {
     return (
         <FriendForm 
             postNewFriend={this.props.postNewFriend}
             handleInputChanges={this.handleInputChanges}
             addFriend={this.addFriend}
+            updateFriend={this.updateFriend}
             friend={this.state.friend}
+            friends={this.props.friends}
         />
     );
   }
 }
 
+const mapStateToProps = state => ({
+  friends: state.friends,
+  isUpdating: state.isUpdating
+})
+
 export default connect(
-  null,
-  { postNewFriend }
+  mapStateToProps,
+  { postNewFriend, updateFriend }
 )(FriendFormContainer);
