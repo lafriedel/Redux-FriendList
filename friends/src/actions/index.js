@@ -14,8 +14,8 @@ export const getFriends = () => dispatch => {
     dispatch({ type: GET_FRIENDS_INIT });
     axios
         .get(baseUrl)
-        .then(res => console.log(res))
-        .catch(err => console.log(err));
+        .then(res => dispatch({ type: GET_FRIENDS_SUCCESS, payload: res.data }))
+        .catch(err => dispatch({ type: GET_FRIENDS_FAIL, payload: err }));
 }
 
 export const postNewFriend = () => dispatch => {

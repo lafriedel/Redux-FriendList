@@ -4,13 +4,14 @@ import FriendFormContainer from './containers/FriendFormContainer';
 import Navigation from './components/Navigation/Navigation';
 
 import { getFriends } from './actions'
+import { connect } from 'react-redux';
 
 import './App.css';
 
 class App extends Component {
 
   componentDidMount() {
-    
+    this.props.getFriends();
   }
 
   render() {
@@ -24,4 +25,5 @@ class App extends Component {
   }
 }
 
-export default App;
+
+export default connect(null, { getFriends })(App);
