@@ -5,7 +5,7 @@ const FriendsList = props => {
     return (
         <div>
             {props.friends.map(friend => {
-                return <FriendCard friend={friend} />
+                return <FriendCard key={friend.id} friend={friend} />
             })}
         </div>
     );

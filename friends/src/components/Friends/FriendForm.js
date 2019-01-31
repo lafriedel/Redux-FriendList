@@ -3,10 +3,10 @@ import React from "react";
 const FriendForm = props => {
   return (
     <>
-      <form>
-        <input type="text" name="name" placeholder="Name" />
-        <input type="number" name="age" placeholder="Age" />
-        <input type="email" name="email" placeholder="Email" />
+      <form onSubmit={(e) => props.addFriend(e)}>
+        <input type="text" name="name" onChange={props.handleInputChanges} placeholder="Name" />
+        <input type="number" name="age" onChange={props.handleInputChanges} placeholder="Age" />
+        <input type="email" name="email" onChange={props.handleInputChanges} placeholder="Email" />
         <button>Add friend</button>
       </form>
     </>
