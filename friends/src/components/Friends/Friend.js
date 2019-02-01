@@ -7,7 +7,7 @@ const Friend = props => {
         props.deleteFriend(friend);
     }
     return (
-        <div>
+        <div className="friend">
             <h2>{props.friend.name}</h2>
             <p>{props.friend.age} years old</p>
             <p>Contact info: {props.friend.email}</p>

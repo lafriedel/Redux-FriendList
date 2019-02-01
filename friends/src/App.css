@@ -1,32 +1,56 @@
-.App {
+body {
+  color: grey;
+}
+
+h1 {
+  color: #444;
+  font-size: 2.6em;
+}
+
+button {
+background: grey;
+color: white;
+padding: 8px 12px;
+border: 0;
+margin: 5px;
+font-size: 14px;
+}
+
+.headline {
+  display: flex;
+  justify-content: center;
+}
+
+.friends-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.friend-card {
+
+  width: 49.7%;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.friend {
+  margin: 20px;
+  padding-bottom: 25px;
+  border: 1px dotted grey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.friend h2 {
+  color: #444;
+}
+
+.friend-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.friend-form input {
+  padding: 5px;
+  font-size: 14px;
+  margin: 0 10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

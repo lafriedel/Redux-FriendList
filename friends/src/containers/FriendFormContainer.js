@@ -35,6 +35,7 @@ class FriendFormContainer extends React.Component {
 
   render() {
     return (
+      <div className="friend-form">
         <FriendForm 
             postNewFriend={this.props.postNewFriend}
             handleInputChanges={this.handleInputChanges}
@@ -43,6 +44,8 @@ class FriendFormContainer extends React.Component {
             friend={this.state.friend}
             friends={this.props.friends}
         />
+      </div>
+
     );
   }
 }

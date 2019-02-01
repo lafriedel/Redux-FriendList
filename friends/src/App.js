@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
-import FriendsListContainer from './containers/FriendsListContainer';
-import FriendFormContainer from './containers/FriendFormContainer';
-import Navigation from './components/Navigation/Navigation';
+import React, { Component } from "react";
+import FriendsListContainer from "./containers/FriendsListContainer";
+import FriendFormContainer from "./containers/FriendFormContainer";
 
-import { getFriends } from './actions'
-import { connect } from 'react-redux';
+import { getFriends } from "./actions";
+import { connect } from "react-redux";
 
-import './App.css';
+import "./App.css";
 
 class App extends Component {
-
   componentDidMount() {
     this.props.getFriends();
   }
@@ -17,7 +15,10 @@ class App extends Component {
   render() {
     return (
       <>
-        <Navigation />
+        <div className="headline">
+          <h1>Friends or Frenemies?</h1>
+        </div>
+
         <FriendFormContainer />
         <FriendsListContainer />
       </>
@@ -25,5 +26,7 @@ class App extends Component {
   }
 }
 
-
-export default connect(null, { getFriends })(App);
+export default connect(
+  null,
+  { getFriends }
+)(App);
